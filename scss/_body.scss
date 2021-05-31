@@ -1,0 +1,112 @@
+.body{
+    display: flex;
+    padding: 50px 9% 0 10%;
+    justify-content: space-between;
+
+    .tittle{
+
+        h1{
+            width: 80%;
+            color: $Very-Dark-Blue;
+            font-weight: 700;
+            font-size: 55px;
+        }
+
+        p{
+            color: $Dark-Grayish-Blue;
+            font-size: 20px;
+            width: 55%;
+        }
+
+        .button{
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 400;
+            color: white;
+            background: $Bright-Red;
+            border-radius: 40px;
+            transition: .3s;
+            box-shadow: 0px 8px 10px rgba(240, 141, 117, .7);
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+
+    .img_body{
+        img{
+            height: 30.625rem;
+            width: 33.75rem;
+        }
+    }
+
+    @media (max-width: 1200px){
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .tittle{
+            order: 2;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            h1{
+                font-size: 50px;
+            }
+
+            p{
+                width: 70%;
+                font-size: 25px;
+            }
+
+            .button{
+                margin-top: 40px;
+                margin-bottom: 120px;
+                width: 200px;
+                height: 60px;
+            }
+        }
+
+        .img_body{
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 500px){
+        padding: 50px 5%;
+        margin-bottom: 0;
+
+        .tittle{
+            width: 100%;
+
+            h1{
+                width: 100%;
+                font-size: 30px;
+            }
+
+            p{
+                width: 80%;
+                font-size: 15px;
+            }
+
+            .button{
+                width: 150px;
+                height: 50px;
+            }
+        }
+    }
+
+}

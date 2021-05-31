@@ -1,0 +1,28 @@
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+body{
+    max-width: 1920px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Be Vietnam', sans-serif;
+    background: $Vary-Light-Gray url(/scss/images/bg-tablet-pattern.svg) no-repeat;
+    background-position: 110% -10%;
+    overflow-x: hidden;
+
+    @media (max-width: 1200px){
+        background-size: 60%;
+        background-position: 115% -3%;
+    }
+
+    @media (max-width: 500px){
+        background: url(/scss/images/bg-tablet-pattern.svg), url(/scss/images/bg-tablet-pattern.svg);
+        background-repeat: no-repeat;
+        background-size: 110%, 70%;
+        background-position: -150% -3%, 200% 22%;
+    }
+}
