@@ -2,9 +2,9 @@ footer{
     margin-top: 150px;
 
     .pre_footer{
+        z-index: 1;
         position: relative;
         background-color: $Bright-Red;
-        //background: url(/scss/images/bg-tablet-pattern.svg), url(/scss/images/bg-tablet-pattern.svg);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -12,12 +12,14 @@ footer{
         height: 250px;
 
         h2{
+            z-index: 10;
             width: 35%;
             font-size: 40px;
             color: white;
         }
 
         .button{
+            z-index: 10;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,7 +55,7 @@ footer{
     .pre_footer::before{
         content: "";
         background: url(/scss/images/bg-tablet-pattern.svg);
-        background-position: 180% 120%;
+        background-position: calc(100% + 400px) calc(100% - 100px);
         background-repeat: no-repeat;
         top: 0;
         left: 0;
@@ -161,6 +163,7 @@ footer{
             align-items: flex-end;
 
             .email{
+                position: relative;
                 display: flex;
                 
                 .input{

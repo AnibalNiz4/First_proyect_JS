@@ -42,20 +42,11 @@ img5.addEventListener("mouseleave", () =>{
     img5.src = "../scss/images/icon-instagram.svg";
 })
 
-let elem = document.createElement('div');
+let elem = document.createElement('span');
 elem.id = 'notify';
 elem.style.display = 'none';
 elem.style.position = 'absolute';
-
-window.addEventListener("resize", function(event) {
-    if(document.body.clientWidth > 1400){
-        elem.style.bottom = '110px';
-    }else if(document.body.clientWidth >= 1080 && document.body.clientWidth <= 1400){
-        elem.style.bottom = '125px';
-    }else if(document.body.clientWidth < 1080){
-        elem.style.bottom = '440px';
-    }
-})
+elem.style.bottom = '-20px';
 
 form.appendChild(elem);
 

@@ -1,35 +1,28 @@
 html {
-  min-height: 100%;
+  min-height: 100vh;
   position: relative;
 }
 
 body {
-  max-width: 1920px;
+  min-width: 100vw;
+  background: #fafafa;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 1rem;
   font-family: 'Be Vietnam', sans-serif;
-  background: #fafafa url(/scss/images/bg-tablet-pattern.svg) no-repeat;
-  background-position: 110% -10%;
   overflow-x: hidden;
 }
 
-@media (max-width: 1200px) {
-  body {
-    background-size: 60%;
-    background-position: 115% -3%;
-  }
-}
-
-@media (max-width: 500px) {
-  body {
-    background: url(/scss/images/bg-tablet-pattern.svg), url(/scss/images/bg-tablet-pattern.svg);
-    background-repeat: no-repeat;
-    background-size: 110%, 70%;
-    background-position: -150% -3%, 200% 22%;
-  }
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  background: url(/scss/images/bg-tablet-pattern.svg) no-repeat;
+  background-position: calc(100% + 100px) -100px;
 }
 
 .overlay {
@@ -761,6 +754,7 @@ footer {
 }
 
 footer .pre_footer {
+  z-index: 1;
   position: relative;
   background-color: #f25f3a;
   display: -webkit-box;
@@ -777,12 +771,14 @@ footer .pre_footer {
 }
 
 footer .pre_footer h2 {
+  z-index: 10;
   width: 35%;
   font-size: 40px;
   color: white;
 }
 
 footer .pre_footer .button {
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -825,7 +821,7 @@ footer .pre_footer::after {
 footer .pre_footer::before {
   content: "";
   background: url(/scss/images/bg-tablet-pattern.svg);
-  background-position: 180% 120%;
+  background-position: calc(100% + 400px) calc(100% - 100px);
   background-repeat: no-repeat;
   top: 0;
   left: 0;
@@ -966,6 +962,7 @@ footer .footer .email_footer {
 }
 
 footer .footer .email_footer .email {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1120,6 +1117,7 @@ footer .footer .email_footer p {
 }
 
 .container {
+  position: relative;
   height: 100%;
   width: 100%;
 }

@@ -8,7 +8,13 @@ const name_responsive = document.querySelector('.name_responsive');
 const text_responsive = document.querySelector('.text_responsive');
 
 
-window.addEventListener("resize", function(event) {
+if(document.body.clientWidth > 500){
+    responsive.style.display = "none";
+}else{
+    responsive.style.display = "flex";
+}
+
+window.addEventListener("resize", () => {
     if(document.body.clientWidth > 500){
         responsive.style.display = "none";
     }else{
